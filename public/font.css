@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "IRANSansWeb_UltraLight";
+  font-style: normal;
+  font-weight: 100;
+  src: local("IRANSansWeb_UltraLight"), url("./fonts/IRANSansWeb_UltraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSansWeb_Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("IRANSansWeb_Light"), url("./fonts/IRANSansWeb_Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSansWeb_Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("IRANSansWeb_Medium"), url("./fonts/IRANSansWeb_Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSansWeb_Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: local("IRANSansWeb_Bold"), url("./fonts/IRANSansWeb_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANSansWeb_Black";
+  font-style: normal;
+  font-weight: 900;
+  src: local("IRANSansWeb_Black"), url("./fonts/IRANSansWeb_Black.ttf") format("truetype");
+}
