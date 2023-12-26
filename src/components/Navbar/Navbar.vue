@@ -1,7 +1,7 @@
 <template>
   <div id="navbar">
     <a href="https://www.excoino.com/">
-      <img src="@/static/Navbar/logo.svg" alt="" />
+      <img src="../../../public/Navbar/logo.svg" alt="" />
     </a>
   </div>
 </template>

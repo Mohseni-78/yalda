@@ -2,19 +2,19 @@
   <div id="footer">
     <div class="social">
       <a href="https://instagram.com/excoino_com?igshid=NzZhOTFlYzFmZQ==" target="_blank">
-        <img src="@/static/Footer/instagram.svg" alt="" />
+        <img src="../../../public/Footer/instagram.svg" alt="" />
       </a>
       <a href="https://t.me/excoino" target="_blank">
-        <img src="@/static/Footer/telegram.svg" alt="" />
+        <img src="../../../public/Footer/telegram.svg" alt="" />
       </a>
       <a href="http://aparat.com/excoino/" target="_blank">
-        <img src="@/static/Footer/aparat.svg" alt="" />
+        <img src="../../../public/Footer/aparat.svg" alt="" />
       </a>
       <a href="https://twitter.com/excoino" target="_blank">
-        <img src="@/static/Footer/twitter.svg" alt="" />
+        <img src="../../../public/Footer/twitter.svg" alt="" />
       </a>
       <a href="https://ir.linkedin.com/company/excoino-com" target="_blank">
-        <img src="@/static/Footer/linkedin.svg" alt="" />
+        <img src="../../../public/Footer/linkedin.svg" alt="" />
       </a>
     </div>
     <div class="links">

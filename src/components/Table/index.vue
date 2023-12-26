@@ -1,6 +1,8 @@
 <template>
   <div id="table" class="container">
-    <div class="head"><span>جدول نفرات برتر </span><img src="@/static/Table/cup.svg" alt="" /></div>
+    <div class="head">
+      <span>جدول نفرات برتر </span><img src="../../../public/Table/cup.svg" alt="" />
+    </div>
     <!-- table head -->
     <div id="thead">
       <div class="rank">رتبه</div>
@@ -13,8 +15,8 @@
         v-for="(item, index) in data"
         :key="index"
         :rank="item.rank"
-        :name="item.name"
-        :score="item.score"
+        :username="item.username"
+        :score_with_referral="item.score_with_referral"
       />
     </section>
   </div>
@@ -25,19 +27,26 @@ import Card from "./Card.vue";
 export default {
   data() {
     return {
-      data: [
-        { rank: "۱", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۲", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۳", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۴", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۵", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۶", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۷", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۸", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۹", name: "محمد حسینی", score: "۱۰۰" },
-        { rank: "۱۰", name: "محمد حسینی", score: "۱۰۰" },
-      ],
+      data: [],
     };
+  },
+  mounted() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      fetch("https://api-marketing.excoino.net/board/get/json", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "P-API-KEY": "84fa8361-e610-56f5-2aea-b57564e0834c",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          this.data = data.slice(0, 10);
+        });
+    },
   },
   components: { Card },
 };
@@ -50,7 +59,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: none;
   .head {
     display: flex;
     align-items: center;

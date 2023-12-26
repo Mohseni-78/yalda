@@ -1,9 +1,9 @@
 <template>
   <div id="countDown" class="">
     <div class="head">
-      <p class="title">فقط تا<span class="highlight"> ۹ دی</span></p>
+      <p class="title">فقط تا<span class="highlight"> ۱۵ دی</span></p>
       <p class="des">
-        یادت باشه برای کسب امتیاز فقط تا ۹ دی فرصت داری، چون اسامی برنده‌‌ها ۱۰ دی مشخص می‌شه!
+        یادت باشه برای کسب امتیاز فقط تا ۱۵ دی فرصت داری، چون اسامی برنده‌‌ها ۱۶ دی مشخص می‌شه!
       </p>
     </div>
     <div class="counter">
@@ -50,7 +50,6 @@ export default {
       setInterval(() => {
         let now = new Date().getTime();
         let distance = countDownDate - now;
-        console.log(this);
 
         this.day = Math.floor(distance / (1000 * 60 * 60 * 24));
         this.hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

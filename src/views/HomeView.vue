@@ -4,8 +4,8 @@
     <Navbar />
     <Header />
     <CountDown />
-    <Table />
     <How />
+    <Table />
     <Footer />
   </div>
 </template>

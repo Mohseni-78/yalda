@@ -1,7 +1,7 @@
 <template>
   <div id="fix">
     <a href="https://www.excoino.com/" class="logo">
-      <img src="@/static/Navbar/logo.svg" alt="" />
+      <img src="../../../public/Navbar/logo.svg" alt="" />
     </a>
     <a href="https://panel.excoino.com/auth/login">
       <button class="CTA btn" id="CTA">دریافت کد دعوت</button>

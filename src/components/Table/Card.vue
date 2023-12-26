@@ -15,8 +15,8 @@
         {{ rank }}
       </span>
     </div>
-    <div class="name">{{ name }}</div>
-    <div class="score">{{ score }}</div>
+    <div class="name">{{ username }}</div>
+    <div class="score">{{ score_with_referral | e2p }}</div>
   </div>
 </template>
 <script>
@@ -24,7 +24,15 @@ export default {
   data() {
     return {};
   },
-  props: { rank: String, name: String, score: String, reset: Boolean },
+  props: { rank: String, username: String, score_with_referral: String, reset: Boolean },
+  filters: {
+    e2p: (num) => {
+      const e2p = (s) => s.toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+      const seperatedNumber = num.toString().match(/(\d+?)(?=(\d{3})+(?!\d)|$)/g);
+      const joinedNumber = seperatedNumber.join(",");
+      return e2p(joinedNumber);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -64,6 +72,7 @@ export default {
     font-weight: 500;
     text-align: right;
     flex: 4.3;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
   .score {
     display: flex;
